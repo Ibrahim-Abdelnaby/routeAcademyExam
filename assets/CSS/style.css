@@ -1,3 +1,650 @@
+/* ========== Linking Fonts ========== */
+/* ===== Montserrat ===== */
+/* Black */
+@font-face {
+    font-family: "Montserrat", sans-serif;
+    src: url(../Fonts/Montserrat-Black.woff2),
+        url(../Fonts/Montserrat-Black.woff);
+    font-weight: 800;
+}
+/* Bold */
+@font-face {
+    font-family: "Montserrat", sans-serif;
+    src: url(../Fonts/Montserrat-Bold.woff2),
+        url(../Fonts/Montserrat-Bold.woff);
+    font-weight: 700;
+}
+/* SemiBold */
+@font-face {
+    font-family: "Montserrat", sans-serif;
+    src: url(../Fonts/Montserrat-SemiBold.woff2),
+        url(../Fonts/Montserrat-SemiBold.woff);
+    font-weight: 600;
+}
+/* Medium */
+@font-face {
+    font-family: "Montserrat", sans-serif;
+    src: url(../Fonts/Montserrat-Medium.woff2),
+        url(../Fonts/Montserrat-Medium.woff);
+    font-weight: 500;
+}
+/* Regular */
+@font-face {
+    font-family: "Montserrat", sans-serif;
+    src: url(../Fonts/Montserrat-Regular.woff2),
+        url(../Fonts/Montserrat-Regular.woff);
+    font-weight: normal;
+}
+/* ===== Poppines ===== */
+/* Bold */
+@font-face {
+    font-family: "Poppins", sans-serif;
+    src: url(../Fonts/poppins-bold-webfont.woff2),
+        url(../Fonts/poppins-bold-webfont.woff);
+    font-weight: 700;
+}
+/* SemiBold */
+@font-face {
+    font-family: "Poppins", sans-serif;
+    src: url(../Fonts/poppins-semibold-webfont.woff2),
+        url(../Fonts/poppins-semibold-webfont.woff);
+    font-weight: 600;
+}
+/* Medium */
+@font-face {
+    font-family: "Poppins", sans-serif;
+    src: url(../Fonts/poppins-medium-webfont.woff2),
+        url(../Fonts/poppins-medium-webfont.woff);
+    font-weight: 500;
+}
+/* Regular */
+@font-face {
+    font-family: "Poppins", sans-serif;
+    src: url(../Fonts/poppins-regular-webfont.woff2),
+        url(../Fonts/poppins-regular-webfont.woff);
+    font-weight: normal;
+}
 :root {
-    --white-color: #e8e8e8;
+    --white-color: #fff;
+    --light-color: #e8e8e8;
+    --light-bg: #f7f7f7;
+    --dark-gray: #748182;
+    --dark-color: #343434;
+    --darker-color: #1c1c1c;
+    --icon-bg: #f4f4f4;
+}
+/* =========== Global Style ========== */
+body {
+    font-family: "Poppins", sans-serif;
+}
+h1, h2, h3, h4, h5, h6, .logo {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+}
+a:link {
+    text-decoration: none;
+}
+img {
+    width: 100%;
+}
+.btn-custom-primary {
+    --bs-btn-bg: var(--darker-color);
+    --bs-btn-border-color: var(--darker-color);
+    --bs-btn-hover-bg: var(--white-color);
+    --bs-btn-hover-border-color: var(--darker-color);
+    color: var(--white-color);
+}
+.btn-custom-primary:hover {
+    color: var(--dark-color);
+}
+.btn-custom-primary, .btn-outline-dark {
+    font-size: 13px;
+    padding: 10px 30px;
+}
+section {
+    padding: 100px 0;
+}
+.section-head h3 {
+    font-size: 40px;
+    z-index: 1;
+}
+.section-head h3::after {
+    content: '';
+    width: 100%;
+    height: 30px;
+    background-image: url(../images/dots.png);
+    background-repeat: repeat;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    z-index: -1;
+}
+#hero .scrolled {
+    background-color: #fff;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.09);
+    padding: 1rem 0 1rem;
+}
+#hero .scrolled a {
+    color: #1c1c1c !important;
+}
+#hero .scrolled .active::after {
+    background-color: #1c1c1c;
+}
+.dark-gray {
+    color: var(--dark-gray);
+}
+.fw-600 {
+    font-weight: 600;
+}
+.fw-700 {
+    font-weight: 700;
+}
+.fw-800 {
+    font-weight: 800;
+}
+.fw-900 {
+    font-weight: 900;
+}
+.transition-3s {
+    transition: all 0.3s ease-in;
+}
+.transition-5s {
+    transition: all 0.5s ease-in;
+}
+/* =========== Hero Section ========== */
+#hero {
+    background-image: url(../images/bg.jpg);
+    background-attachment: fixed;
+}
+#hero .bg-overlay {
+    min-height: inherit;
+    background-color: rgba(0, 0, 0, 0.65);
+}
+.logo {
+    font-size: 1.125rem;
+}
+#hero nav {
+    padding-top: 2.813rem;
+    font-size: 0.9rem;
+}
+#hero .active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--white-color);
+}
+#hero nav .menu>:not(:last-child) {
+    margin-right: 1rem;
+}
+#hero .icon {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.23);
+}
+/* =========== About =========== */
+#about .about-img::before {
+    content: "";
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    left: 0px;
+    bottom: -30px;
+    background-image: url(../images/dots.png);
+    background-repeat: repeat;
+    z-index: -1;
+}
+#about h3 {
+    font-size: 30px;
+    color: var(--dark-color);
+}
+#about span {
+    color: #999;
+    letter-spacing: 1.5px;
+}
+#about p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+#about .progress {
+    background: var(--light-bg);
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15) inset;
+}
+#about .progress h5, #about .progress span {
+    font-size: 13px;
+    color: var(--white-color);
+}
+#about .progress span {
+    font-size: 0.7rem;
+}
+#about .progress-bar {
+    padding: 0 1rem;
+}
+#about .progress, .progress-stacked {
+    --bs-progress-bar-bg: var(--darker-color);
+    --bs-progress-height: 1.5rem;
+}
+#about .skills>:not(:last-child) {
+    margin-bottom: 0.5rem;
+}
+/* =========== Services =========== */
+#services {
+    background-color: var(--light-bg);
+}
+#services .item {
+    padding: 50px 20px;
+    box-shadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1);
+}
+#services .icon {
+    width: 70px;
+    height: 70px;
+    font-size: 30px;
+    background: var(--icon-bg);
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+#services h6 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+#services p {
+    word-spacing: 2px;
+    font-size: 14px;
+}
+#services .item {
+    cursor: context-menu;
+}
+#services i {
+    font: normal normal normal 23px / 1 FontAwesome;
+}
+#services .item:hover .icon {
+    background-color: var(--darker-color);
+    transition: all 0.5s;
+}
+#services .item:hover .icon i {
+    color: var(--white-color);
+}
+/* =========== Nav Tabs =========== */
+#works .nav-tabs {
+    padding-top: 1rem;
+    --bs-nav-tabs-border-width: 0;
+}
+#works .nav {
+    --bs-nav-link-color: var(--darker-color);
+    --bs-nav-link-hover-color: var(--darker-color);
+}
+#myTab .active {
+    position: relative;
+    display: inline-block;
+}
+#myTab .active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 2rem);
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    background-color: var(--darker-color);
+    animation: borderEffect 0.4s ease-in;
+}
+#works .hover-bg h6{
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    transform: translateY(-0.5rem);
+}
+#works .hover-bg .icons {
+    transform: translateY(0.5rem);
+}
+#works .icon, #team .icon {
+    width: 25px;
+    height: 25px;
+    background-color: var(--darker-color);
+    border: 1px solid var(--darker-color);
+    cursor: pointer;
+}
+#works .icon:hover, #team .icon:hover {
+    background-color: var(--white-color);
+}
+#works .icon:hover i {
+    color: var(--darker-color);
+}
+#works .item {
+    overflow: hidden;
+    position: relative;
+}
+#works .hover-bg {
+    transform: translateY(1rem);
+    opacity: 0;
+}
+#works .item:hover .hover-bg{
+    transform: translateY(0);
+    opacity: 1;
+}
+#works .item:hover .hover-bg h6, #works .hover-bg .icons {
+    transform: translateY(0);
+}
+/* =========== clientss =========== */
+#clients {
+    background-color: var(--light-bg);
+}
+#clients .carousel-inner{
+    cursor: grab;
+}
+#clients button {
+    background-color: #d6d6d6;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+#clients button.active {
+    background-color: #869791;
+}
+#clients .carousel-indicators {
+    position: static;
+    margin: 0;
+    align-self: flex-end;
+}
+#clients .item-img {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 1rem;
+}
+#clients p {
+    line-height: 1.6;
+    font-size: 15px;
+}
+#clients h6 {
+    margin: 30px 0 5px;
+}
+#clients span {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 30px;
+}
+/* =========== Metrics =========== */
+#metrics h3 {
+    font-size: 30px;
+}
+#metrics p {
+    font-size: 15px;
+}
+/* =========== Team =========== */
+#team {
+    background-color: var(--light-bg);
+}
+#team .item-content {
+    padding: 25px;
+    background-color: #5b5b5b;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+#team .flip-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    opacity: 0;
+    transform: rotateY(180deg) scale(0.5, 0.5);
+}
+#team .flip-card .icon {
+    width: 50px;
+    height: 50px;
+}
+#team .flip-card .icon i {
+    color: var(--white-color);
+}
+#team .flip-card .icon:hover i {
+    color: var(--darker-color);
+}
+#team .item-img:hover img {
+    transform: scale(1.15);
+}
+#team .team-card:hover .flip-card{
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition: all 0.3s ease-in;
+}
+/* =========== Contact =========== */
+#contact .icon {
+    background-color: var(--icon-bg);
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+#contact .item:hover .icon {
+    background-color: var(--dark-color);
+}
+#contact .icon i {
+    color: var(--darker-color);
+}
+#contact .item:hover .icon i {
+    color: var(--icon-bg);
+}
+#contact h6 {
+    margin-bottom: 10px;
+}
+#contact p {
+    font-size: 15px;
+    color: var(--dark-gray);
+}
+.mb-50 {
+    margin-bottom: 50px
+}
+#contact input, #contact textarea {
+    background: rgb(244, 244, 244);
+    margin-bottom: 15px;
+    padding: 10px;
+}
+#contact textarea {
+    height: 160px;
+}
+/* =========== Footer =========== */
+footer {
+    background-color: var(--darker-color);
+    padding: 30px 0;
+}
+footer p {
+    color: rgb(116, 129, 130);
+    font-size: 13px;
+    word-spacing: 2px;
+}
+/* =========== Modal =========== */
+#modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 199999;
+    background-color: rgba(28, 28, 28, 0.8);
+    min-height: 100vh;
+}
+/* =========== Animations =========== */
+/* Preloader */
+#preloader {
+    z-index: 9999;
+}
+#preloader .loading {
+    margin: 50vh auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 10px solid var(--white-color);
+    border-top: 10px solid #000;
+    animation: rotate 1.2s infinite linear;
+}
+#preloader::before, #preloader::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background-color: var(--white-color);
+    opacity: 0;
+}
+#preloader::before {
+    top: 0;
+    animation: movetop 1s ease-in;
+}
+#preloader::after {
+    bottom: 0;
+    animation: movedown 1s ease-in;
+}
+@keyframes movetop {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+@keyframes movedown {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+@keyframes loaderHiddin {
+    100% {
+        display: none;
+    }
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(360deg);
+        opacity: 0;
+    }
+}
+/* Typing Animation */
+.typing-effect__words::after {
+    content: '';
+    animation: typing 5.7s linear infinite 1s;
+    font-weight: 500;
+    border-right: 2px solid var(--white-color);
+}
+@keyframes typing {
+    0% { content: ''; }
+    1.5% { content: 'L '; }
+    3% { content: 'La '; }
+    4.5% { content: 'Lar '; }
+    6% { content: 'Larr '; }
+    7.5% { content: 'Larry '; }
+    9% { content: 'Larry  '; }
+    10.5% { content: 'Larry D '; }
+    12% { content: 'Larry Da '; }
+    13.5% { content: 'Larry Dan '; }
+    15% { content: 'Larry Dani '; }
+    16.5% { content: 'Larry Danie '; }
+    18% { content: 'Larry Daniel '; }
+    19.5% { content: 'Larry Daniels '; }
+    24% { content: 'Larry Daniel '; }
+    25.5% { content: 'Larry Danie '; }
+    27% { content: 'Larry Dani '; }
+    28.5% { content: 'Larry Dan '; }
+    30% { content: 'Larry Da '; }
+    31.5% { content: 'Larry D '; }
+    33% { content: 'Larry  '; }
+    34.5% { content: 'Larry '; }
+    36% { content: 'Larr '; }
+    37.5% { content: 'Lar '; }
+    39% { content: 'La '; }
+    40.5% { content: 'L '; }
+    42% { content: ''; }
+    43.5% { content: 'D '; }
+    45% { content: 'De '; }
+    46.5% { content: 'Dev '; }
+    48% { content: 'Devl '; }
+    49.5% { content: 'Devlo '; }
+    51% { content: 'Devlop '; }
+    52.5% { content: 'Devlope '; }
+    54% { content: 'Devloper '; }
+    60% { content: 'Devlope '; }
+    61.5% { content: 'Devlop '; }
+    63% { content: 'Devlo '; }
+    64.5% { content: 'Devl '; }
+    67% { content: 'Dev '; }
+    68.5% { content: 'De '; }
+    70% { content: 'D '; }
+    71.5% { content: ''; }
+    73% { content: 'D '; }
+    74.5% { content: 'Ds '; }
+    76% { content: 'Dsi '; }
+    77.5% { content: 'Dsig '; }
+    79% { content: 'Dsign '; }
+    80.5% { content: 'Dsigne '; }
+    82% { content: 'Dsigner '; }
+    88% { content: 'Dsigne '; }
+    89.5% { content: 'Dsign '; }
+    91% { content: 'Dsig '; }
+    92.5% { content: 'Dsi '; }
+    94% { content: 'Ds '; }
+    95.5% { content: 'D '; }
+    100% { content: ''; }
+}
+/* Nav and Tabs Animation */
+@keyframes borderEffect {
+    0% {
+        width: 0;
+        left: 1rem;
+    }
+    100% {
+        width: calc(100% - 2rem);
+    }
+}
+/* =========== Media & Screens =========== */
+/* Edit Container */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1170px;
+    }
+}
+/* Edit Navbar */
+@media (max-width: 992px) {
+    #hero .menu {
+        background-color: var(--white-color);
+        flex-direction: column;
+        padding: 2rem 0;
+    }
+    #hero li {
+        color: var(--dark-color) !important;
+        align-self: center;
+    }
+    #hero nav .menu>:not(:last-child) {
+        margin-right: 0;
+    }
+    #hero li a {
+        text-align: center;
+    }
+    #hero .active::after {
+        background-color: var(--dark-color);
+    }
+}
+@media (min-width: 992px) {
+    #testimonial .item {
+        width: 778.328px;
+    }
+}
+@media (min-width: 992px) and (max-width: 993px) {
+    #hero .menu {
+        display: none !important;
+    }
 }
